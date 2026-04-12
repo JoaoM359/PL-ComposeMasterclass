@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.plcomposemasterclass.basiclayout.HotelBookingScreen
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PLComposeMasterclassTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    HotelBookingScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
