@@ -8,7 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.plcomposemasterclass.advancedlayoutsmeasurementsandmodifiers.SizeModifiersDemo
+import com.example.plcomposemasterclass.advancedlayoutsmeasurementsandmodifiers.SizePositionModifiersDemo
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,14 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             PLComposeMasterclassTheme {
-                SizeModifiersDemo()
-//                Scaffold(
-//                    modifier = Modifier.fillMaxSize(),
-//                ) { innerPadding ->
-//                    FocusManagementDemo(
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
+                SizePositionModifiersDemo()
             }
         }
     }
