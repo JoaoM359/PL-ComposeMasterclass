@@ -9,25 +9,27 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.plcomposemasterclass.sideeffectandeffecthandlers.LaunchedEffectDemo
+import com.example.plcomposemasterclass.basicmodifiers.TriangleShape
+import com.example.plcomposemasterclass.compositionlocals.LocalShape
+import com.example.plcomposemasterclass.compositionlocals.MyShapedButton
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             PLComposeMasterclassTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                ) { innerPadding ->
-                    LaunchedEffectDemo(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(innerPadding)
-                    )
+                CompositionLocalProvider(LocalShape provides TriangleShape) {
+                    Scaffold(
+                        modifier = Modifier.fillMaxSize(),
+                    ) { innerPadding ->
+                        MyShapedButton(modifier = Modifier.padding(innerPadding))
+                    }
                 }
             }
         }

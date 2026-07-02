@@ -12,9 +12,11 @@ import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -22,10 +24,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
+val LocalShape = compositionLocalOf {
+    RectangleShape
+}
+
 @Composable
 fun CompositionLocalDemo(modifier: Modifier = Modifier) {
-    val contentColor = LocalContentColor.current
-    val textStyle = LocalTextStyle.current
     Button(
         modifier = modifier,
         onClick = {},
@@ -42,6 +46,19 @@ fun CompositionLocalDemo(modifier: Modifier = Modifier) {
             )
             Text("Hello world")
         }
+    }
+}
+
+@Composable
+fun MyShapedButton(
+    modifier: Modifier = Modifier
+) {
+    Button(
+        modifier = modifier,
+        onClick = {},
+        shape = LocalShape.current
+    ) {
+        Text("Hello world")
     }
 }
 
