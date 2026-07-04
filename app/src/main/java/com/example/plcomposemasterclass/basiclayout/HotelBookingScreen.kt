@@ -86,7 +86,7 @@ fun HotelBookingScreen(modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .heightIn(
-                            max = 250.dp
+                            max = 300.dp
                         ),
                     painter = painterResource(id = R.drawable.living_room),
                     contentDescription = null,
@@ -234,15 +234,9 @@ private fun HotelFadedBanner(modifier: Modifier = Modifier) {
             // Name
             Text(
                 text = "Hotel California Strawberry",
-                fontWeight = FontWeight.Bold,
-                fontSize = when (windowClass.windowWidthSizeClass) {
-                    WindowWidthSizeClass.COMPACT -> 18.sp
-                    WindowWidthSizeClass.MEDIUM -> 24.sp
-                    WindowWidthSizeClass.EXPANDED -> 28.sp
-                    else -> 18.sp
-                },
                 maxLines = 2,
-                overflow = TextOverflow.Ellipsis
+                overflow = TextOverflow.Ellipsis,
+                style = MaterialTheme.typography.displayLarge
             )
 
             // Location
