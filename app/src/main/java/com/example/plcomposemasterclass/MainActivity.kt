@@ -10,13 +10,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.plcomposemasterclass.basicmodifiers.TriangleShape
 import com.example.plcomposemasterclass.compositionlocals.LocalShape
-import com.example.plcomposemasterclass.performanceoptimization.mainsafety.BitmapCompressor
-import com.example.plcomposemasterclass.performanceoptimization.mainsafety.PhotoPickerScreen
+import com.example.plcomposemasterclass.performanceoptimization.KeysCustomLayoutDemo
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,10 +28,7 @@ class MainActivity : ComponentActivity() {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
                     ) { innerPadding ->
-                        PhotoPickerScreen(
-                            compressor = remember {
-                                BitmapCompressor(context = applicationContext)
-                            },
+                        KeysCustomLayoutDemo(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(innerPadding)
