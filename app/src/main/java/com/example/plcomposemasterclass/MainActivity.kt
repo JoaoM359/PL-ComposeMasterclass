@@ -12,9 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.plcomposemasterclass.basiclayout.HotelBookingScreen
 import com.example.plcomposemasterclass.basicmodifiers.TriangleShape
 import com.example.plcomposemasterclass.compositionlocals.LocalShape
+import com.example.plcomposemasterclass.performanceoptimization.ImageLoadingAndCachingDemo
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,8 +28,9 @@ class MainActivity : ComponentActivity() {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
                     ) { innerPadding ->
-                        HotelBookingScreen(
+                        ImageLoadingAndCachingDemo(
                             modifier = Modifier
+                                .fillMaxSize()
                                 .padding(innerPadding)
                         )
                     }
