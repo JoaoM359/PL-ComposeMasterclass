@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.plcomposemasterclass.basicmodifiers.TriangleShape
 import com.example.plcomposemasterclass.compositionlocals.LocalShape
-import com.example.plcomposemasterclass.performanceoptimization.KeysCustomLayoutDemo
+import com.example.plcomposemasterclass.performanceoptimization.MovableContentDemo
 import com.example.plcomposemasterclass.ui.theme.PLComposeMasterclassTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
                     ) { innerPadding ->
-                        KeysCustomLayoutDemo(
+                        MovableContentDemo(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(innerPadding)
